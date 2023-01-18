@@ -92,6 +92,4 @@
 if(isset($_POST["valid"])) {
     $nouveauLibelle = $_POST["nouveauLibelle"];
     $ancienId = $_POST["ancienId"];
-    echo $nouveauLibelle;
-    echo $ancienId;
 }

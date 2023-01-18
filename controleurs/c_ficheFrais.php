@@ -15,6 +15,5 @@ switch($action){
 	}
 	case 'changerLibelle':{
 		$pdo->majEtatLibelle($nouveauLibelle,$ancienId);
-		echo "ok";
 	}
 }
