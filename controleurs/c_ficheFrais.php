@@ -14,8 +14,7 @@ switch($action){
 		break;
 	}
 	case 'changerLibelle':{
-		$ancienId = $_REQUEST['ancienId'];
-		$nouveaiLibelle = $_REQUEST['nouveauLibelle'];
-		$pdo->majEtatLibelle($libelle,$remplace);
+		$pdo->majEtatLibelle($nouveauLibelle,$ancienId);
+		echo "ok";
 	}
 }

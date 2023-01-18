@@ -339,8 +339,9 @@ class PdoGsb{
 		PdoGsb::$monPdo->exec($req);
 	}
 
-	public function majEtatLibelle($libelle,$remplace) {
-		$req = "update Etat set libelle = '$lnouveauLibelle' where id='$ancienId'";
+	public function majEtatLibelle($nouveauLibelle,$ancienId) {
+		$req = "update Etat set libelle = '$nouveauLibelle' where id='$ancienId'";
+		PdoGsb::$monPdo->exec($req);
 	}
 }
 ?>
