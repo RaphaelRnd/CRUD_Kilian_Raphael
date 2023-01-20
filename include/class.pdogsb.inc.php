@@ -44,6 +44,7 @@ class PdoGsb{
 		if(PdoGsb::$monPdoGsb==null){
 			PdoGsb::$monPdoGsb= new PdoGsb();
 		}
+		//test github
 		return PdoGsb::$monPdoGsb;  
 	}
 /**
