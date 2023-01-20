@@ -339,9 +339,17 @@ class PdoGsb{
 		PdoGsb::$monPdo->exec($req);
 	}
 
-	public function majEtatLibelle($nouveauLibelle,$ancienId) {
-		$req = "update Etat set libelle = '$nouveauLibelle' where id='$ancienId'";
+	public function majEtatLibelle($nouveauLibelle,$ancienLib) {
+		$req = "update Etat set libelle = '$nouveauLibelle' where libelle='$ancienLib'";
 		PdoGsb::$monPdo->exec($req);
+	}
+
+	public function getIdFromLibelle($ancienId){
+		$req="select id as newId from Etat where libelle = '$ancienId'";
+		$res = PdoGsb::$monPdo->query($req);
+		$laLigne = $res->fetch();
+		$newId = $laLigne['newId'];
+		return $newId;
 	}
 }
 ?>

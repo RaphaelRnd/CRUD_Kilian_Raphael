@@ -71,8 +71,8 @@
     </tr>
     
 <?php } ?>
-    <form method="post" action="index.php?uc=ficheFrais&action=changerLibelle">
-    <select name="ancienId" id="etat-select">
+    <form method="post">
+    <select name="ancienLib" id="etat-select">
              <option value="">Libellé changé</option>
              <?php
             foreach($etats as $etat) 
@@ -80,7 +80,7 @@
                  $idEtat = $etat['id'];
                   $libEtat = $etat['libelle'];
             ?>
-              <option value="<?php echo $idEtat ?>"><?php echo $idEtat ?></option>
+              <option value="<?php echo $libEtat ?>"><?php echo $libEtat ?></option>
             <?php } ?>
             </select>
             <p> en :</p>
@@ -91,5 +91,5 @@
 <?php
 if(isset($_POST["valid"])) {
     $nouveauLibelle = $_POST["nouveauLibelle"];
-    $ancienId = $_POST["ancienId"];
+    $ancienLib = $_POST["ancienLib"];
 }

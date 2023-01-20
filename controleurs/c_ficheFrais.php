@@ -3,7 +3,9 @@ include("vues/v_admin.php");
 $fiches=$pdo->getFiches();
 $etats=$pdo->getEtat();
 include("vues/v_listeFiche.php");
+include("vues/v_modif.php");
 $action = $_REQUEST['action'];
+
 
 switch($action){
 	case 'changerEtat':{
@@ -14,6 +16,6 @@ switch($action){
 		break;
 	}
 	case 'changerLibelle':{
-		$pdo->majEtatLibelle($nouveauLibelle,$ancienId);
+		$pdo->majEtatLibelle($nouveauLibelle,$ancienLib);
 	}
 }

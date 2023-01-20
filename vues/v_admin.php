@@ -15,7 +15,7 @@
             <a href="index.php?uc=connexion&action=deconnexion" title="Se déconnecter">Déconnexion</a>
         </li>
         <li>
-            <a href="index.php?uc=modifierLibellé" title="Modifier libelle"> Modifier libelle </a>
+            <a href="controleurs/c_modif.php" title="Modifier libelle"> Modifier libelle </a>
         </li>
     </ul>
 </div>
