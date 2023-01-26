@@ -16,6 +16,7 @@ switch($action){
 		break;
 	}
 	case 'changerLibelle':{
+			$pdo->majEtatLibelle($nouveauLibelle,$ancienLib);
 			header('Location: /GSB-Frais-main-dep/index.php?uc=ficheFrais');
 			echo "ok";
 		break;
